@@ -15,7 +15,8 @@ public class UsersController {
 
     @GetMapping("/status/check")
     public String status() {
-        return "working on port " + env.getProperty("local.server.port");
+        return "working on port " + env.getProperty("local.server.port")
+                + ". " + env.getProperty("app.config.server.test-property");
     }
 
 }
